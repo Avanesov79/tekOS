@@ -14,7 +14,7 @@ RELEASE="$(rpm -E %fedora)"
 
 curl https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-$(rpm -E %fedora)/varlad-zellij-fedora-$(rpm -E %fedora).repo > /etc/yum.repos.d/_copr_varlad-zellij.repo
 curl https://copr.fedorainfracloud.org/coprs/atim/lazygit/repo/fedora-$(rpm -E %fedora)/atim-lazygit-fedora-$(rpm -E %fedora).repo > /etc/yum.repos.d/_copr_atim-lazygit.repo
-rpm-ostree refresh-md --force
+#rpm-ostree refresh-md --force
 
 # this installs a package from fedora repos
 rpm-ostree install neovim pass git jq yq bat fzf ripgrep htop eza stow syncthing ansible hyprland lazygit zellij
