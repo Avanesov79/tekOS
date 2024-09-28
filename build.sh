@@ -16,10 +16,10 @@ curl https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-$(rpm -E 
 curl https://copr.fedorainfracloud.org/coprs/atim/lazygit/repo/fedora-$(rpm -E %fedora)/atim-lazygit-fedora-$(rpm -E %fedora).repo > /etc/yum.repos.d/_copr_atim-lazygit.repo
 
 # this installs a package from fedora repos
-rpm-ostree install --idempotent --allow-inactive pass #neovim git jq yq bat fzf ripgrep htop eza stow syncthing ansible lazygit zellij
+rpm-ostree install --idempotent --allow-inactive pass git jq yq bat fzf ripgrep htop eza stow syncthing ansible lazygit zellij #neovim
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
 
 #### Example for enabling a System Unit File
 
-#systemctl enable podman.socket
+systemctl enable podman.socket
