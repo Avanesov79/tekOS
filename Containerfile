@@ -52,10 +52,10 @@ COPY build.sh /tmp/build.sh
 
 # Create the directory for the nix package manager to live in.
 #   It needs to be bind linked into /var
-RUN mkdir /nix && ostree container commit #&& mkdir -p /var/nix && mount --bind /var/nix /nix
+#RUN mkdir /nix && ostree container commit #&& mkdir -p /var/nix && mount --bind /var/nix /nix
 #RUN mkdir -p /var/nix && ln -s /var/nix /nix
 
-RUN mkdir -p /var/lib/alternatives && \
+RUN mkdir /nix && mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
 ## NOTES:
