@@ -50,6 +50,11 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY build.sh /tmp/build.sh
 
+# Create the directory for the nix package manager to live in.
+#   It needs to be bind linked into /var
+
+RUN mkdir /nix && mkdir -p /var/nix && mount --bind /var/nix /nix
+
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
