@@ -22,6 +22,7 @@ rpm-ostree install --idempotent --allow-inactive pass git jq yq bat fzf ripgrep 
 
 #### Example for enabling a System Unit File
 
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --determinate --no-confirm --no-start-daemon
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
+    sh -s -- install --determinate --no-confirm --no-start-daemon
 
 systemctl enable podman.socket
