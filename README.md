@@ -14,3 +14,5 @@ or use
 rpm-ostree rebase ostree-unverified-registry:docker://ghcr.io/avanesov79/tekos:latest
 ```
 first and then rebase to the signed image if it initially fails.
+
+bump 06JAN2025
